@@ -718,6 +718,294 @@ tr_PM10_24h_23 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/tr_PM10_24h_2
 ##  ARIMA(1,0,0) with non-zero mean : 6271.322
 ## 
 ##  Best model: ARIMA(1,0,0) with non-zero mean</code></pre>
+<pre class="r"><code>mod.tr_PM10_24h_00 &lt;- Arima(tr_PM10_24h_00[,1], order=c(1,0,0))
+mod.tr_PM10_24h_01 &lt;- Arima(tr_PM10_24h_01[,1], order=c(1,0,0))
+mod.tr_PM10_24h_02 &lt;- Arima(tr_PM10_24h_02[,1], order=c(1,0,0))
+mod.tr_PM10_24h_03 &lt;- Arima(tr_PM10_24h_03[,1], order=c(2,0,1))
+mod.tr_PM10_24h_04 &lt;- Arima(tr_PM10_24h_04[,1], order=c(1,0,0))
+mod.tr_PM10_24h_05 &lt;- Arima(tr_PM10_24h_05[,1], order=c(2,0,2))
+mod.tr_PM10_24h_06 &lt;- Arima(tr_PM10_24h_06[,1], order=c(2,0,2))
+mod.tr_PM10_24h_07 &lt;- Arima(tr_PM10_24h_07[,1], order=c(2,0,2))
+mod.tr_PM10_24h_08 &lt;- Arima(tr_PM10_24h_08[,1], order=c(2,0,1))
+mod.tr_PM10_24h_09 &lt;- Arima(tr_PM10_24h_09[,1], order=c(2,0,2))
+mod.tr_PM10_24h_10 &lt;- Arima(tr_PM10_24h_10[,1], order=c(2,0,2))
+mod.tr_PM10_24h_11 &lt;- Arima(tr_PM10_24h_11[,1], order=c(2,0,1))
+mod.tr_PM10_24h_12 &lt;- Arima(tr_PM10_24h_12[,1], order=c(1,0,0))
+mod.tr_PM10_24h_13 &lt;- Arima(tr_PM10_24h_13[,1], order=c(1,0,0))
+mod.tr_PM10_24h_14 &lt;- Arima(tr_PM10_24h_14[,1], order=c(1,0,0))
+mod.tr_PM10_24h_15 &lt;- Arima(tr_PM10_24h_15[,1], order=c(1,0,0))
+mod.tr_PM10_24h_16 &lt;- Arima(tr_PM10_24h_16[,1], order=c(1,0,0))
+mod.tr_PM10_24h_17 &lt;- Arima(tr_PM10_24h_17[,1], order=c(1,0,0))
+mod.tr_PM10_24h_18 &lt;- Arima(tr_PM10_24h_18[,1], order=c(1,0,3))
+mod.tr_PM10_24h_19 &lt;- Arima(tr_PM10_24h_19[,1], order=c(1,0,4))
+mod.tr_PM10_24h_20 &lt;- Arima(tr_PM10_24h_20[,1], order=c(1,0,0))
+mod.tr_PM10_24h_21 &lt;- Arima(tr_PM10_24h_21[,1], order=c(1,0,0))
+mod.tr_PM10_24h_22 &lt;- Arima(tr_PM10_24h_22[,1], order=c(1,0,0))
+mod.tr_PM10_24h_23 &lt;- Arima(tr_PM10_24h_23[,1], order=c(1,0,0))</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_00)</code></pre>
+<pre><code>##                       ME     RMSE      MAE      MPE     MAPE      MASE
+## Training set -0.01066215 9.046426 5.545863 -10.5769 24.77577 0.9297155
+##                      ACF1
+## Training set 0.0007913917</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_01)</code></pre>
+<pre><code>##                        ME    RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.007171338 9.05654 5.532047 -10.58013 24.74364 0.9245285
+##                     ACF1
+## Training set 0.002218792</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_02)</code></pre>
+<pre><code>##                        ME     RMSE      MAE       MPE    MAPE      MASE
+## Training set -0.007221944 9.162642 5.561319 -10.80074 24.9276 0.9192771
+##                       ACF1
+## Training set -0.0006905762</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_03)</code></pre>
+<pre><code>##                        ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.009452525 9.252804 5.575419 -11.03883 25.12548 0.9143546
+##                     ACF1
+## Training set -0.01315878</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_04)</code></pre>
+<pre><code>##                        ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.007249813 9.315152 5.595105 -11.22306 25.35366 0.9091236
+##                     ACF1
+## Training set -0.00543019</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_05)</code></pre>
+<pre><code>##                        ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.009354247 9.311225 5.575394 -11.26178 25.37419 0.9028854
+##                      ACF1
+## Training set -9.69499e-05</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_06)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE     MASE
+## Training set -0.04067439 9.279134 5.514106 -11.11371 24.96077 0.891039
+##                      ACF1
+## Training set 0.0001349238</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_07)</code></pre>
+<pre><code>##                       ME    RMSE      MAE       MPE    MAPE      MASE
+## Training set -0.03962428 9.23525 5.500444 -11.05036 24.9385 0.8905446
+##                      ACF1
+## Training set 0.0003575262</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_08)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.02969297 9.199964 5.489072 -10.89278 24.83512 0.8908362
+##                    ACF1
+## Training set 0.01167571</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_09)</code></pre>
+<pre><code>##                       ME     RMSE    MAE       MPE     MAPE      MASE
+## Training set -0.03376623 9.152542 5.4642 -10.65536 24.59088 0.8966543
+##                      ACF1
+## Training set 0.0007708143</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_10)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE    MAPE    MASE
+## Training set -0.03646543 9.060505 5.426827 -10.39944 24.3118 0.90285
+##                      ACF1
+## Training set 0.0008512354</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_11)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.03820108 8.962855 5.442892 -10.21777 24.26071 0.9071276
+##                    ACF1
+## Training set 0.01252758</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_12)</code></pre>
+<pre><code>##                       ME    RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.01073335 8.91756 5.534925 -10.30677 24.75802 0.9167716
+##                     ACF1
+## Training set 0.001224995</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_13)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.01058604 8.835668 5.487643 -10.13681 24.48918 0.9100283
+##                    ACF1
+## Training set 0.00718022</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_14)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.01108439 8.773007 5.445371 -9.983963 24.23786 0.9131619
+##                    ACF1
+## Training set 0.01261996</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_15)</code></pre>
+<pre><code>##                       ME     RMSE      MAE      MPE     MAPE     MASE
+## Training set -0.01107925 8.783281 5.421346 -9.98554 24.11439 0.911117
+##                    ACF1
+## Training set 0.01329246</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_16)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.01112525 8.818649 5.435955 -9.915775 23.99711 0.9161724
+##                    ACF1
+## Training set 0.01150832</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_17)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.01083327 8.877379 5.448941 -9.912782 23.92252 0.9156415
+##                     ACF1
+## Training set 0.008111978</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_18)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE    MAPE    MASE
+## Training set -0.04082689 8.866975 5.393061 -9.771607 23.4388 0.90661
+##                     ACF1
+## Training set 0.007086464</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_19)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.04544467 8.903011 5.394579 -9.720999 23.33414 0.9047006
+##                      ACF1
+## Training set 0.0003229722</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_20)</code></pre>
+<pre><code>##                       ME     RMSE      MAE      MPE     MAPE      MASE
+## Training set -0.01084281 9.021965 5.497376 -10.0233 23.95654 0.9202977
+##                      ACF1
+## Training set -0.002013393</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_21)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.01090903 9.106266 5.533073 -10.19499 24.17618 0.9233744
+##                      ACF1
+## Training set -0.005646797</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_22)</code></pre>
+<pre><code>##                       ME     RMSE      MAE       MPE     MAPE      MASE
+## Training set -0.01091711 9.190374 5.570962 -10.43844 24.49278 0.9261493
+##                     ACF1
+## Training set -0.00882604</code></pre>
+<pre class="r"><code>accuracy(mod.tr_PM10_24h_23)</code></pre>
+<pre><code>##                       ME     RMSE      MAE      MPE     MAPE      MASE
+## Training set -0.01091359 9.161773 5.572953 -10.6207 24.78157 0.9295225
+##                      ACF1
+## Training set -0.006288581</code></pre>
+<pre class="r"><code>te_PM10_24h_00 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_00.csv&quot;, row.names=1)
+te_PM10_24h_01 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_01.csv&quot;, row.names=1)
+te_PM10_24h_02 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_02.csv&quot;, row.names=1)
+te_PM10_24h_03 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_03.csv&quot;, row.names=1)
+te_PM10_24h_04 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_04.csv&quot;, row.names=1)
+te_PM10_24h_05 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_05.csv&quot;, row.names=1)
+te_PM10_24h_06 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_06.csv&quot;, row.names=1)
+te_PM10_24h_07 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_07.csv&quot;, row.names=1)
+te_PM10_24h_08 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_08.csv&quot;, row.names=1)
+te_PM10_24h_09 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_09.csv&quot;, row.names=1)
+te_PM10_24h_10 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_10.csv&quot;, row.names=1)
+te_PM10_24h_11 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_11.csv&quot;, row.names=1)
+te_PM10_24h_12 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_12.csv&quot;, row.names=1)
+te_PM10_24h_13 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_13.csv&quot;, row.names=1)
+te_PM10_24h_14 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_14.csv&quot;, row.names=1)
+te_PM10_24h_15 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_15.csv&quot;, row.names=1)
+te_PM10_24h_16 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_16.csv&quot;, row.names=1)
+te_PM10_24h_17 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_17.csv&quot;, row.names=1)
+te_PM10_24h_18 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_18.csv&quot;, row.names=1)
+te_PM10_24h_19 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_19.csv&quot;, row.names=1)
+te_PM10_24h_20 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_20.csv&quot;, row.names=1)
+te_PM10_24h_21 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_21.csv&quot;, row.names=1)
+te_PM10_24h_22 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_22.csv&quot;, row.names=1)
+te_PM10_24h_23 &lt;- read.csv(&quot;~/It Academy/Data Science/Aire/te_PM10_24h_23.csv&quot;, row.names=1)</code></pre>
+<pre class="r"><code>mod.te_PM10_24h_00&lt;- Arima(te_PM10_24h_00[,1], model=mod.tr_PM10_24h_00)
+mod.te_PM10_24h_01&lt;- Arima(te_PM10_24h_01[,1], model=mod.tr_PM10_24h_01)
+mod.te_PM10_24h_02&lt;- Arima(te_PM10_24h_02[,1], model=mod.tr_PM10_24h_02)
+mod.te_PM10_24h_03&lt;- Arima(te_PM10_24h_03[,1], model=mod.tr_PM10_24h_03)
+mod.te_PM10_24h_04&lt;- Arima(te_PM10_24h_04[,1], model=mod.tr_PM10_24h_04)
+mod.te_PM10_24h_05&lt;- Arima(te_PM10_24h_05[,1], model=mod.tr_PM10_24h_05)
+mod.te_PM10_24h_06&lt;- Arima(te_PM10_24h_06[,1], model=mod.tr_PM10_24h_06)
+mod.te_PM10_24h_07&lt;- Arima(te_PM10_24h_07[,1], model=mod.tr_PM10_24h_07)
+mod.te_PM10_24h_08&lt;- Arima(te_PM10_24h_08[,1], model=mod.tr_PM10_24h_08)
+mod.te_PM10_24h_09&lt;- Arima(te_PM10_24h_09[,1], model=mod.tr_PM10_24h_09)
+mod.te_PM10_24h_10&lt;- Arima(te_PM10_24h_10[,1], model=mod.tr_PM10_24h_10)
+mod.te_PM10_24h_11&lt;- Arima(te_PM10_24h_11[,1], model=mod.tr_PM10_24h_11)
+mod.te_PM10_24h_12&lt;- Arima(te_PM10_24h_12[,1], model=mod.tr_PM10_24h_12)
+mod.te_PM10_24h_13&lt;- Arima(te_PM10_24h_13[,1], model=mod.tr_PM10_24h_13)
+mod.te_PM10_24h_14&lt;- Arima(te_PM10_24h_14[,1], model=mod.tr_PM10_24h_14)
+mod.te_PM10_24h_15&lt;- Arima(te_PM10_24h_15[,1], model=mod.tr_PM10_24h_15)
+mod.te_PM10_24h_16&lt;- Arima(te_PM10_24h_16[,1], model=mod.tr_PM10_24h_16)
+mod.te_PM10_24h_17&lt;- Arima(te_PM10_24h_17[,1], model=mod.tr_PM10_24h_17)
+mod.te_PM10_24h_18&lt;- Arima(te_PM10_24h_18[,1], model=mod.tr_PM10_24h_18)
+mod.te_PM10_24h_19&lt;- Arima(te_PM10_24h_19[,1], model=mod.tr_PM10_24h_19)
+mod.te_PM10_24h_20&lt;- Arima(te_PM10_24h_20[,1], model=mod.tr_PM10_24h_20)
+mod.te_PM10_24h_21&lt;- Arima(te_PM10_24h_21[,1], model=mod.tr_PM10_24h_21)
+mod.te_PM10_24h_22&lt;- Arima(te_PM10_24h_22[,1], model=mod.tr_PM10_24h_22)
+mod.te_PM10_24h_23&lt;- Arima(te_PM10_24h_23[,1], model=mod.tr_PM10_24h_23)</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_00)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE      ACF1
+## Training set 3.059189 8.898989 6.860889 1.799681 22.69108 0.9507219 0.1518352</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_01)</code></pre>
+<pre><code>##                    ME     RMSE      MAE     MPE     MAPE     MASE      ACF1
+## Training set 3.076689 8.914524 6.846975 1.72241 22.74456 0.955933 0.1543158</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_02)</code></pre>
+<pre><code>##                    ME    RMSE      MAE      MPE     MAPE      MASE     ACF1
+## Training set 3.131952 9.00422 6.904955 1.645364 23.04556 0.9621957 0.154386</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_03)</code></pre>
+<pre><code>##                    ME     RMSE     MAE      MPE     MAPE      MASE      ACF1
+## Training set 3.214782 9.085422 6.90853 1.792025 22.98506 0.9617806 0.1518933</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_04)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE      ACF1
+## Training set 3.216127 9.182835 6.914356 1.698973 22.95787 0.9589995 0.1482026</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_05)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE      ACF1
+## Training set 3.032875 9.175204 6.887855 1.038329 22.94687 0.9479357 0.1425366</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_06)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE      ACF1
+## Training set 2.123967 8.999932 6.777336 -2.122777 23.17005 0.9169559 0.1324451</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_07)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE      ACF1
+## Training set 2.116591 9.032829 6.748196 -2.080178 22.95358 0.9092227 0.1184146</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_08)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE     ACF1
+## Training set 2.143895 9.049506 6.684747 -1.855945 22.59957 0.9001893 0.113457</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_09)</code></pre>
+<pre><code>##                   ME     RMSE      MAE       MPE    MAPE      MASE      ACF1
+## Training set 2.11764 8.979425 6.625979 -1.771709 22.3204 0.8993119 0.1015792</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_10)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE       ACF1
+## Training set 2.090923 8.941707 6.565281 -1.741878 22.11289 0.8949734 0.08649325</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_11)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE       ACF1
+## Training set 2.081647 8.921686 6.568967 -1.727932 22.18359 0.8996351 0.07811687</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_12)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE       ACF1
+## Training set 2.971843 9.168986 6.739184 1.416379 22.01717 0.9170369 0.06103215</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_13)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE       ACF1
+## Training set 2.920243 9.117624 6.733502 1.401658 21.92157 0.9198725 0.05950976</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_14)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE    MAPE      MASE       ACF1
+## Training set 2.880967 9.121242 6.762745 1.221291 22.0888 0.9109249 0.05236335</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_15)</code></pre>
+<pre><code>##                    ME    RMSE     MAE     MPE     MAPE      MASE       ACF1
+## Training set 2.885279 9.11674 6.79379 1.14765 22.24669 0.9170216 0.05949729</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_16)</code></pre>
+<pre><code>##                   ME    RMSE      MAE      MPE     MAPE      MASE       ACF1
+## Training set 2.90481 9.11538 6.850657 1.217287 22.39207 0.9213187 0.06202151</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_17)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE       ACF1
+## Training set 2.940529 8.973524 6.795851 1.458717 22.23513 0.9428829 0.09811486</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_18)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE      ACF1
+## Training set 2.068095 8.600943 6.634034 -1.369498 22.20699 0.9573446 0.1590658</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_19)</code></pre>
+<pre><code>##                    ME     RMSE      MAE       MPE     MAPE      MASE      ACF1
+## Training set 2.044937 8.623648 6.638157 -1.333834 22.08866 0.9400018 0.1367848</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_20)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE     ACF1
+## Training set 3.038931 8.914269 6.780328 2.042832 21.83982 0.9641977 0.139329</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_21)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE      ACF1
+## Training set 3.092724 8.918487 6.796397 2.186322 21.91682 0.9651946 0.1558925</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_22)</code></pre>
+<pre><code>##                   ME     RMSE      MAE      MPE     MAPE      MASE      ACF1
+## Training set 3.14636 8.936346 6.828832 2.255646 22.17302 0.9631047 0.1717597</code></pre>
+<pre class="r"><code>accuracy(mod.te_PM10_24h_23)</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE     MAPE      MASE      ACF1
+## Training set 3.130206 8.935282 6.874339 2.047721 22.57917 0.9588441 0.1668418</code></pre>
+<pre class="r"><code>write.csv(mod.te_PM10_24h_00[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_00.csv&quot;)
+write.csv(mod.te_PM10_24h_01[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_01.csv&quot;)
+write.csv(mod.te_PM10_24h_02[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_02.csv&quot;)
+write.csv(mod.te_PM10_24h_03[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_03.csv&quot;)
+write.csv(mod.te_PM10_24h_04[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_04.csv&quot;)
+write.csv(mod.te_PM10_24h_05[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_05.csv&quot;)
+write.csv(mod.te_PM10_24h_06[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_06.csv&quot;)
+write.csv(mod.te_PM10_24h_07[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_07.csv&quot;)
+write.csv(mod.te_PM10_24h_08[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_08.csv&quot;)
+write.csv(mod.te_PM10_24h_09[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_09.csv&quot;)
+write.csv(mod.te_PM10_24h_10[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_10.csv&quot;)
+write.csv(mod.te_PM10_24h_11[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_11.csv&quot;)
+write.csv(mod.te_PM10_24h_12[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_12.csv&quot;)
+write.csv(mod.te_PM10_24h_13[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_13.csv&quot;)
+write.csv(mod.te_PM10_24h_14[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_14.csv&quot;)
+write.csv(mod.te_PM10_24h_15[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_15.csv&quot;)
+write.csv(mod.te_PM10_24h_16[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_16.csv&quot;)
+write.csv(mod.te_PM10_24h_17[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_17.csv&quot;)
+write.csv(mod.te_PM10_24h_18[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_18.csv&quot;)
+write.csv(mod.te_PM10_24h_19[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_19.csv&quot;)
+write.csv(mod.te_PM10_24h_20[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_20.csv&quot;)
+write.csv(mod.te_PM10_24h_21[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_21.csv&quot;)
+write.csv(mod.te_PM10_24h_22[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_22.csv&quot;)
+write.csv(mod.te_PM10_24h_23[[&quot;fitted&quot;]],&quot;C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_23.csv&quot;)</code></pre>
 
 
 
