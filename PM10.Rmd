@@ -1,0 +1,62 @@
+
+We clean the memory and charge the libraries
+
+```{r}
+rm(list=ls())
+
+library(fpp2)
+library(tseries)
+```
+
+We assign a variable with the time series of the train data
+
+
+```{r}
+tr_PM10_24h_00 <- read.csv("~/It Academy/Data Science/Aire/tr_PM10_24h_00.csv", row.names=1)
+```
+
+
+We execute auto.arima to find the optimal parameters of the model
+
+
+```{r}
+mod.tr_PM10_24h_00 <- auto.arima(tr_PM10_24h_00, trace=TRUE, allowdrift=FALSE)
+```
+
+The best model is ARIMA (1,0,0). We create a model with this parameters and the train data
+
+```{r}
+mod.tr_PM10_24h_00 <- Arima(tr_PM10_24h_00[,1], order=c(1,0,0))
+```
+
+We evaluate the accuracy of the prediction model, in this case the one step forecasting is executed on the train data 
+
+```{r}
+accuracy(mod.tr_PM10_24h_00)
+```
+
+We assign a variable with the time series of the test data
+
+
+```{r}
+te_PM10_24h_00 <- read.csv("~/It Academy/Data Science/Aire/te_PM10_24h_00.csv", row.names=1)
+```
+
+We perform a one step forecast in the data test using the model with the fitted parameters from the train data
+
+```{r}
+mod.te_PM10_24h_00<- Arima(te_PM10_24h_00[,1], model=mod.tr_PM10_24h_00)
+```
+
+We evaluate the accuracy of the model on the test data,
+
+```{r}
+accuracy(mod.te_PM10_24h_00)
+```
+
+We write a csv with the values of the time series forecast of the data test
+
+```{r}
+write.csv(mod.te_PM10_24h_00[["fitted"]],"C:\\Users\\hinoj\\OneDrive\\Documentos\\It Academy\\Data Science\\Aire\\fr_PM10_24h_00.csv")
+```
+
