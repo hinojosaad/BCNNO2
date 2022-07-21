@@ -5,8 +5,8 @@ We analyze the $NO_2$ and $PM_{10}$ concentration registers collected by an atmo
 The repository contains the following files
 
 - AIR_BCN.pdf: A paper with a complete description, analysis and results of the project
-- NO2E43.ipynb, PM10E43.ipynb:
-- NO2R.pdf, PM10R.pdf: 
-- NO2E43PR.ipynb, PM10E43PR.ipynb:
+- NO2E43.ipynb, PM10E43.ipynb: Python notebooks with the code of the project that was developed wyth Python
+- NO2R.pdf, PM10R.pdf: Pdfs (originally R notebook) with the code of the project that was developed with R
+- NO2E43PR.ipynb, PM10E43PR.ipynb: Python notebooks with the code use to extract the analyzed data from the pollution concentration registers avaibale at the Barcelona Open Data webpage
 
 This work is presented as a final project for getting the Data Science with Python, IT Academy's certificate. https://www.barcelonactiva.cat/en/itacademy
