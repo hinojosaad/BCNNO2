@@ -9,4 +9,4 @@ The repository contains the following files
 - NO2R.pdf, PM10R.pdf: 
 - NO2E43PR.ipynb, PM10E43PR.ipynb:
 
-This work is presented as a final project for getting the Data Science with Python, IT Academy's certificate. https://www.barcelonactiva.cat/es/itacademy
+This work is presented as a final project for getting the Data Science with Python, IT Academy's certificate. https://www.barcelonactiva.cat/en/itacademy
