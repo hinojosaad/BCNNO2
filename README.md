@@ -4,6 +4,9 @@ We analyze the $NO_2$ and $PM_{10}$ concentration registers collected by an atmo
 
 The repository contains the following files
 
--
--
--
+- AIR_BCN.pdf: A paper which contains a complete description and results of the project
+- NO2E43.ipynp, PM10E43.ipyny:
+- NO2R.pdf, PM10R.pdf: 
+- NO2E43PR.ipynb, PM10E43PR.ipynb:
+
+This work is presented as a final project for getting the Data Science with Python, IT Academy's certificate. https://www.barcelonactiva.cat/es/itacademy
