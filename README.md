@@ -8,6 +8,6 @@ The repository contains the following files
 - presentacion.pdf: The slides the talk that I gave for presenting the project (in Spanish)
 - NO2E43.ipynb, PM10E43.ipynb: Python notebooks with the code of the project that was developed wyth Python
 - NO2R.pdf, PM10R.pdf: Pdfs (originally R notebook) with the code of the project that was developed with R
-- NO2E43PR.ipynb, PM10E43PR.ipynb: Python notebooks with the code used to extract the analyzed data from the pollution concentration registers avaiable at the Barcelona Open Data webpage
+- E43PR.ipynb: Python notebooks with the code used to extract the analyzed data from the pollution concentration registers avaiable at the Barcelona Open Data webpage
 
 This work is presented as a final project for getting the Data Science, IT Academy's certificate. https://www.barcelonactiva.cat/en/itacademy
